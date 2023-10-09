@@ -13,7 +13,6 @@ const App = () => {
     <BrowserRouter>
       <div className='container'>
         <NavBar />
-        <SideBar />
         <Routes>
           <Route path='/' element={<Feed />} />
           <Route path='/video/:id' element={<VideoDetail />} />
