@@ -7,12 +7,19 @@ import more from '../../assets/more.png';
 import notification from '../../assets/notification.png';
 import Jack from '../../assets/Jack.png';
 import SearchBar from '../SearchBar/SearchBar';
+import { YoutubeConsumer } from '../../context/youtubeContext';
 
 const NavBar = () => {
+  const { showHamburger, setShowHamburger } = YoutubeConsumer();
   return (
     <nav className='navbar'>
       <div className='navbar-left'>
-        <img src={menu} alt='menu-bar' className='menu-icon' />
+        <img
+          src={menu}
+          alt='menu-bar'
+          className='menu-icon'
+          onClick={() => setShowHamburger(!showHamburger)}
+        />
         <Link to='/' className='nav-logo'>
           <img src={logo} alt='vidTube-logo' className='logo' />
         </Link>

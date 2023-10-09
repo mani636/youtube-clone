@@ -6,12 +6,14 @@ import {
   VideoDetail,
   NavBar,
 } from './components';
+import SideBar from './components/SideBar/SideBar';
 
 const App = () => {
   return (
     <BrowserRouter>
       <div className='container'>
         <NavBar />
+        <SideBar />
         <Routes>
           <Route path='/' element={<Feed />} />
           <Route path='/video/:id' element={<VideoDetail />} />
