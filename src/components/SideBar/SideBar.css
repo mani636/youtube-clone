@@ -18,6 +18,7 @@
   align-items: center;
   width: fit-content;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .shortcut-links a:first-child {
@@ -42,6 +43,7 @@
   align-items: center;
   width: fit-content;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .subscribed-list a img {
@@ -72,4 +74,14 @@
 .small-sidebar hr {
   width: 50%;
   margin-bottom: 25px;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+
+  .large-container {
+    padding: 0 5%;
+  }
 }

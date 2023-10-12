@@ -16,27 +16,27 @@ export const links = [
   {
     id: 1,
     img: home,
-    title: 'Home',
+    title: 'New',
   },
   {
     id: 2,
     img: explore,
-    title: 'Explore',
+    title: 'JS Mastery',
   },
   {
     id: 3,
     img: subscription,
-    title: 'Subscription',
+    title: 'Coding',
   },
   {
     id: 4,
     img: library,
-    title: 'Library',
+    title: 'ReactJS',
   },
   {
     id: 5,
     img: history,
-    title: 'History',
+    title: 'Music',
   },
   {
     id: 6,

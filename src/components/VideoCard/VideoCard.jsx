@@ -1,73 +1,38 @@
 import './VideoCard.css';
-import thumbnail from '../../assets/thumbnail1.png';
-import jack from '../../assets/Jack.png';
+import { Link } from 'react-router-dom';
+import { YoutubeConsumer } from '../../context/youtubeContext';
 
 const VideoCard = () => {
+  const { showHamburger, videos } = YoutubeConsumer();
+
+  console.log(videos);
+
   return (
-    <div className='list-container'>
-      <div className='vid-list'>
-        <a href=''>
-          <img src={thumbnail} alt='thumbnail-img' className='thumbnail' />
-        </a>
-        <div className='flex-div'>
-          <img src={jack} alt='jack-img' />
-          <div className='vid-info'>
-            <a href=''>
-              Best channel to learn coding that help you to be a web developer
-            </a>
-            <p>Easy Tutorials</p>
-            <p>15k Views 2 days</p>
-          </div>
-        </div>
-      </div>
+    <div className={showHamburger ? 'large-container' : 'list-container'}>
+      {videos.map((item, index) => {
+        return (
+          <div className='vid-list' key={index}>
+            <Link to={item ? `/video/${item?.id?.videoId}` : ''}>
+              <img
+                src={item?.snippet?.thumbnails?.high?.url}
+                alt={item?.snippet?.title}
+                className='thumbnail'
+              />
+            </Link>
 
-      <div className='vid-list'>
-        <a href=''>
-          <img src={thumbnail} alt='thumbnail-img' className='thumbnail' />
-        </a>
-        <div className='flex-div'>
-          <img src={jack} alt='jack-img' />
-          <div className='vid-info'>
-            <a href=''>
-              Best channel to learn coding that help you to be a web developer
-            </a>
-            <p>Easy Tutorials</p>
-            <p>15k Views 2 days</p>
+            <div className='flex-div'>
+              <img
+                src={item?.snippet?.thumbnails?.high?.url}
+                alt={item?.snippet?.title}
+              />
+              <div className='vid-info'>
+                <Link>{item?.snippet?.title}</Link>
+                <p>{item?.snippet?.channelTitle}</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div className='vid-list'>
-        <a href=''>
-          <img src={thumbnail} alt='thumbnail-img' className='thumbnail' />
-        </a>
-        <div className='flex-div'>
-          <img src={jack} alt='jack-img' />
-          <div className='vid-info'>
-            <a href=''>
-              Best channel to learn coding that help you to be a web developer
-            </a>
-            <p>Easy Tutorials</p>
-            <p>15k Views 2 days</p>
-          </div>
-        </div>
-      </div>
-
-      <div className='vid-list'>
-        <a href=''>
-          <img src={thumbnail} alt='thumbnail-img' className='thumbnail' />
-        </a>
-        <div className='flex-div'>
-          <img src={jack} alt='jack-img' />
-          <div className='vid-info'>
-            <a href=''>
-              Best channel to learn coding that help you to be a web developer
-            </a>
-            <p>Easy Tutorials</p>
-            <p>15k Views 2 days</p>
-          </div>
-        </div>
-      </div>
+        );
+      })}
     </div>
   );
 };

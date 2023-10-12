@@ -1,17 +1,18 @@
 import './SideBar.css';
 import { links, subscribedList } from '../../utils/constant/data';
 import { YoutubeConsumer } from '../../context/youtubeContext';
+import { Link } from 'react-router-dom';
 
 const SideBar = () => {
-  const { showHamburger } = YoutubeConsumer();
+  const { showHamburger, setSelectedCategory } = YoutubeConsumer();
   return (
     <div className='sidebar'>
       <div className={showHamburger ? 'small-sidebar' : 'shortcut-links'}>
         {links.map(({ id, img, title }) => (
-          <a href='' key={id}>
+          <Link key={id} onClick={() => setSelectedCategory({ title })}>
             <img src={img} alt={title} />
             <p>{title}</p>
-          </a>
+          </Link>
         ))}
         <hr />
       </div>
@@ -19,10 +20,10 @@ const SideBar = () => {
       <div className={showHamburger ? 'small-sidebar' : 'subscribed-list'}>
         <h3>SUBSCRIBED</h3>
         {subscribedList.map(({ id, title, img }) => (
-          <a href='' key={id}>
+          <Link key={id}>
             <img src={img} alt={title} />
             <p>{title}</p>
-          </a>
+          </Link>
         ))}
       </div>
     </div>
