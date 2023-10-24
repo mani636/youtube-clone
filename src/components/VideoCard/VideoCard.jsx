@@ -2,38 +2,31 @@ import './VideoCard.css';
 import { Link } from 'react-router-dom';
 import { YoutubeConsumer } from '../../context/youtubeContext';
 
-const VideoCard = () => {
-  const { showHamburger, videos } = YoutubeConsumer();
-
-  console.log(videos);
-
+const VideoCard = ({
+  video: {
+    id: { videoId },
+    snippet,
+  },
+}) => {
   return (
-    <div className={showHamburger ? 'large-container' : 'list-container'}>
-      {videos.map((item, index) => {
-        return (
-          <div className='vid-list' key={index}>
-            <Link to={item ? `/video/${item?.id?.videoId}` : ''}>
-              <img
-                src={item?.snippet?.thumbnails?.high?.url}
-                alt={item?.snippet?.title}
-                className='thumbnail'
-              />
-            </Link>
+    <>
+      <Link
+        to={videoId ? `/video/${videoId}` : `/video/cV2gBU6hKfY`}
+        class='thumbnail'
+      >
+        <img
+          src={snippet?.thumbnails?.medium?.url}
+          alt={snippet?.title}
+          className='thumbnail'
+        />
 
-            <div className='flex-div'>
-              <img
-                src={item?.snippet?.thumbnails?.high?.url}
-                alt={item?.snippet?.title}
-              />
-              <div className='vid-info'>
-                <Link>{item?.snippet?.title}</Link>
-                <p>{item?.snippet?.channelTitle}</p>
-              </div>
-            </div>
-          </div>
-        );
-      })}
-    </div>
+        <div className='details'>
+          <h2 className='title'>{snippet?.title.slice(0, 60)}</h2>
+
+          <p class='description'>{snippet?.channelTitle}</p>
+        </div>
+      </Link>
+    </>
   );
 };
 

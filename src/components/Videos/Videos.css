@@ -1,0 +1,58 @@
+.videos-container {
+  width: 85%;
+  height: auto;
+  position: absolute;
+  left: 15%;
+  top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.wide-videos-container {
+  width: 95%;
+  height: auto;
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  max-width: 400px;
+  margin: 1rem 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.small-card {
+  max-width: 338px;
+  margin: 1rem 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .videos-container {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0%;
+    top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    max-width: 480px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+}

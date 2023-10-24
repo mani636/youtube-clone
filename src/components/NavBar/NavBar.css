@@ -2,18 +2,19 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 10px 2%;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0;
   z-index: 10;
+  height: 4rem;
 }
 
 .navbar-left {
   display: flex;
   align-items: center;
+  margin-right: 8rem;
 }
 
 .menu-icon {

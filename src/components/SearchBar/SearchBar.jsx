@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import search from '../../assets/search.png';
-import voice from '../../assets/voice-search.png';
 import './SearchBar.css';
+import { YoutubeConsumer } from '../../context/youtubeContext';
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState();
@@ -20,7 +20,7 @@ const SearchBar = () => {
 
   return (
     <div className='search-container'>
-      <div onSubmit={onHandleSubmit} className='search-box'>
+      <form className='search-box' onSubmit={onHandleSubmit}>
         <input
           className='search-bar'
           placeholder='Search...'
@@ -28,8 +28,7 @@ const SearchBar = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <img src={search} alt='search-img' />
-      </div>
-      <img src={voice} alt='voice-search-img' className='mic-icon' />
+      </form>
     </div>
   );
 };

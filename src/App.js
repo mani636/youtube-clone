@@ -1,12 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import {
-  ChannelDetail,
-  Feed,
-  SearchFeed,
-  VideoDetail,
-  NavBar,
-} from './components';
-import SideBar from './components/SideBar/SideBar';
+import { Feed, VideoDetail, NavBar, SearchFeed } from './components';
 
 const App = () => {
   return (
@@ -16,7 +9,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Feed />} />
           <Route path='/video/:id' element={<VideoDetail />} />
-          <Route path='/channel/:id' element={<ChannelDetail />} />
+
           <Route path='/search/:searchTerm' element={<SearchFeed />} />
         </Routes>
       </div>

@@ -26,6 +26,10 @@
   width: 15px;
 }
 
+.search-bar {
+  font-size: 1rem;
+}
+
 @media (max-width: 900px) {
   .search-box input {
     width: 180px;

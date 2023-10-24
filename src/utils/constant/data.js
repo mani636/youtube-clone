@@ -1,84 +1,67 @@
 import home from '../../assets/home.png';
-import explore from '../../assets/explore.png';
-import subscription from '../../assets/subscription.png';
-import library from '../../assets/library.png';
-import history from '../../assets/history.png';
-import playlist from '../../assets/playlist.png';
-import message from '../../assets/messages.png';
-import more from '../../assets/show-more.png';
-import jack from '../../assets/Jack.png';
-import simon from '../../assets/simon.png';
-import tom from '../../assets/tom.png';
-import megan from '../../assets/megan.png';
-import cameron from '../../assets/cameron.png';
+import Code from '../../assets/code.jpeg';
+import Music from '../../assets/music.png';
+import School from '../../assets/school.png';
+import Movie from '../../assets/movie.jpeg';
+import Podcast from '../../assets/podcast.png';
+import Game from '../../assets/game.png';
+import Live from '../../assets/live.png';
+import Sport from '../../assets/sport.png';
 
 export const links = [
   {
     id: 1,
-    img: home,
-    title: 'New',
+    imgIcon: home,
+    title: 'Home',
   },
   {
     id: 2,
-    img: explore,
+    imgIcon: Code,
     title: 'JS Mastery',
   },
   {
     id: 3,
-    img: subscription,
+    imgIcon: Code,
     title: 'Coding',
   },
   {
     id: 4,
-    img: library,
+    imgIcon: Code,
     title: 'ReactJS',
   },
   {
     id: 5,
-    img: history,
+    imgIcon: Music,
     title: 'Music',
   },
   {
     id: 6,
-    img: playlist,
-    title: 'Playlist',
+    imgIcon: School,
+    title: 'Education',
   },
   {
     id: 7,
-    img: message,
-    title: 'Message',
+    imgIcon: Movie,
+    title: 'Movies',
   },
   {
     id: 8,
-    img: more,
-    title: 'Show More',
-  },
-];
-
-export const subscribedList = [
-  {
-    id: 1,
-    img: jack,
-    title: 'Jack Nicholson',
+    imgIcon: Podcast,
+    title: 'Podcast',
   },
   {
-    id: 2,
-    img: simon,
-    title: 'Simon Baker',
+    id: 9,
+    imgIcon: Game,
+    title: 'Gaming',
   },
   {
-    id: 3,
-    img: tom,
-    title: 'Tom Hardy',
+    id: 10,
+    imgIcon: Live,
+    title: 'Live',
   },
   {
-    id: 4,
-    img: megan,
-    title: 'Megan Ryan',
-  },
-  {
-    id: 5,
-    img: cameron,
-    title: 'Cameron Diaz',
+    id: 11,
+    imgIcon: Sport,
+    title: 'Sports',
   },
 ];

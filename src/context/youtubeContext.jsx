@@ -5,7 +5,7 @@ export const YoutubeContext = createContext();
 export const YoutubeProvider = ({ children }) => {
   const [showHamburger, setShowHamburger] = useState(false);
 
-  const [selectedCategory, setSelectedCategory] = useState('songs');
+  const [selectedCategory, setSelectedCategory] = useState('  News');
 
   const [videos, setVideos] = useState([]);
 
